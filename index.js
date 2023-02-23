@@ -18,7 +18,7 @@ mongoose.set('strictQuery', false)
 mongoose.connect(process.env.MONGOURL).then(console.log("connected successfully")).catch((e)=>{console.log(e)})
 
 
-app.use(cors({ credentials : true,  origin: "http://localhost:3000" }))
+app.use(cors({ credentials : true,  origin: "https://attendence-management.onrender.com" }))
 app.use(bp.json({limit:'5mb'}))
 app.use(bp.urlencoded({limit:'5mb',extended:true}))
 app.use(cp())
